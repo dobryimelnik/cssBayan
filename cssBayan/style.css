@@ -6,12 +6,11 @@ html {
     border: none;
 }
 .container {
-    background-color: blanchedalmond;
+    background: blanchedalmond url('./img/memes/bg_meme.jpg') repeat;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .accord {
     display: flex;
@@ -28,6 +27,7 @@ html {
     list-style-type: none;
     padding: 2rem;
     border-radius: .6rem;
+    min-width: 30rem;
 }
 .accord__list:hover,
 .accord__item:hover,
@@ -35,7 +35,7 @@ html {
     cursor: pointer;
 }
 .accord__item {
-    width: 40rem;
+    max-width: 40rem;
     overflow: hidden;
     padding: 1.6rem 0;
     border-bottom: 0.1em solid rgba(22, 68, 93, .2);
@@ -54,6 +54,7 @@ html {
 .item__icon {
     width: 2rem;
     height: 2rem;
+    margin-left: 1rem;
     background:  url('./img/icon_on.svg') center no-repeat;
     opacity: 0;
     transition: opacity .3s ease, transform .9s ease;
@@ -64,9 +65,29 @@ html {
 .item__img {
     width: 30rem;
     height: 22rem;
-    background-color: chocolate;
+    /* background-color: chocolate; */
     margin: 0 auto;
     display: none;
+}
+.accord__item:nth-child(1) .item__img {
+    background: url('./img/memes/1.jpg') center no-repeat;
+    background-size: cover;
+}
+.accord__item:nth-child(2) .item__img {
+    background: url('./img/memes/2.jpg') center no-repeat;
+    background-size: cover;
+}
+.accord__item:nth-child(3) .item__img {
+    background: url('./img/memes/3.jpg') center no-repeat;
+    background-size: cover;
+}
+.accord__item:nth-child(4) .item__img {
+    background: url('./img/memes/4.jpg') center no-repeat;
+    background-size: cover;
+}
+.accord__item:nth-child(5) .item__img {
+    background: url('./img/memes/5.jpg') center no-repeat;
+    background-size: cover;
 }
 .accord__item:hover .item__img {
     animation-name: showImg;
