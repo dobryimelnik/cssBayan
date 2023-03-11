@@ -16,7 +16,8 @@
     padding: 30px;
 }
 .accord__item {
-    width: 400px
+    width: 400px;
+    overflow: hidden;
 }
 .item__title {
     color: rgb(22, 68, 93);
@@ -33,4 +34,21 @@
     width: 200px;
     height: 200px;
     background-color: chocolate;
+    margin: 0 auto;
+    display: none;
+}
+.accord__item:hover .item__img {
+    animation-name: showImg;
+    animation-duration: 3s;
+    display: block;
+}
+@keyframes showImg {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
