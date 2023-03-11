@@ -1,3 +1,7 @@
+*:focus-visible {
+    outline: none;
+    border: none;
+}
 .accord {
     background-color: blanchedalmond;
     width: 100%;
@@ -20,7 +24,8 @@
     overflow: hidden;
 }
 .item__title {
-    color: rgb(22, 68, 93);
+    color: #16445d;
+    font-size: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,7 +44,18 @@
 }
 .accord__item:hover .item__img {
     animation-name: showImg;
-    animation-duration: 3s;
+    animation-duration: .3s;
+    display: block;
+}
+.item__btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+.item__btn:focus .item__img {
+    animation: none;
     display: block;
 }
 @keyframes showImg {
