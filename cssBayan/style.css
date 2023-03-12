@@ -8,9 +8,9 @@ html {
 .container {
     background: blanchedalmond url('./img/memes/bg_meme.jpg') repeat;
     width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
+    padding-bottom: 48rem;
 }
 .accord {
     display: flex;
@@ -19,15 +19,15 @@ html {
 }
 .accord__title {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 3rem;
+    font-size: 4.6rem;
     color: #3a3956;
 }
 .accord__list {
     background-color: #ccc;
     list-style-type: none;
-    padding: 2rem;
+    padding: 2.2rem;
     border-radius: .6rem;
-    min-width: 30rem;
+    min-width: 70rem;
 }
 .accord__list:hover,
 .accord__item:hover,
@@ -35,7 +35,7 @@ html {
     cursor: pointer;
 }
 .accord__item {
-    max-width: 40rem;
+    max-width: 70rem;
     overflow: hidden;
     padding: 1.6rem 0;
     border-bottom: 0.1em solid rgba(22, 68, 93, .2);
@@ -45,7 +45,7 @@ html {
 }
 .item__title {
     color: #16445d;
-    font-size: 1.8rem;
+    font-size: 3.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,31 +63,30 @@ html {
     opacity: 1;
 }
 .item__img {
-    width: 30rem;
-    height: 22rem;
-    /* background-color: chocolate; */
+    width: 48rem;
+    height: 40rem;
     margin: 0 auto;
     display: none;
 }
 .accord__item:nth-child(1) .item__img {
     background: url('./img/memes/1.jpg') center no-repeat;
-    background-size: cover;
+    background-size:contain;
 }
 .accord__item:nth-child(2) .item__img {
     background: url('./img/memes/2.jpg') center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .accord__item:nth-child(3) .item__img {
     background: url('./img/memes/3.jpg') center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .accord__item:nth-child(4) .item__img {
     background: url('./img/memes/4.jpg') center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .accord__item:nth-child(5) .item__img {
     background: url('./img/memes/5.jpg') center no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .accord__item:hover .item__img {
     animation-name: showImg;
@@ -127,5 +126,72 @@ html {
     100% {
         transform: translateX(0%);
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .accord__list {
+        min-width: 64rem;
+        padding: 2rem;
+    }
+    .accord__item {
+        max-width: 64rem;
+    }
+    .item__img {
+        width: 48rem;
+        height: 34rem;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .container {
+        padding-bottom: 37rem;
+    }
+    .accord__list {
+        min-width: 46rem;
+        padding: 2rem 1rem;
+    }
+    .accord__item {
+        max-width: 46rem;
+    }
+    .item__img {
+        width: 38rem;
+        height: 28rem;
+    }
+    .accord__title {
+        font-size: 3.6rem;
+    }
+    .item__title {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .container {
+        padding-bottom: 26rem;
+    }
+    .accord__list {
+        min-width: 30rem;
+        padding: 2rem .4rem;
+    }
+    .item__img {
+        width: 28rem;
+        height: 22rem;
+    }
+    .accord__title {
+        font-size: 3rem;
+    }
+    .item__title {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 350px) {
+    .accord__list {
+        min-width: 26rem;
+        padding: 2rem .4rem;
+    }
+    .item__img {
+        width: 24rem;
+        height: 18rem;
     }
 }
