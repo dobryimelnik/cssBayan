@@ -35,11 +35,6 @@ html {
     border-radius: .6rem;
     min-width: 70rem;
 }
-.accord__list:hover,
-.accord__item:hover,
-.item__btn:hover {
-    cursor: pointer;
-}
 .accord__item {
     max-width: 70rem;
     overflow: hidden;
@@ -64,9 +59,6 @@ html {
     background:  url('./img/icon_on.svg') center no-repeat;
     opacity: 0;
     transition: opacity .3s ease, transform .9s ease;
-}
-.accord:hover .item__icon {
-    opacity: 1;
 }
 .item__img {
     width: 48rem;
@@ -94,11 +86,6 @@ html {
     background: url('./img/memes/5.jpg') center no-repeat;
     background-size: contain;
 }
-.accord__item:hover .item__img {
-    animation-name: showImg;
-    animation-duration: .3s;
-    display: block;
-}
 .item__btn {
     display: block;
     width: 100%;
@@ -115,9 +102,6 @@ html {
     animation: none;
     display: block;
 }
-.item__btn:hover .item__icon {
-    transform: rotate(45deg);
-}
 .item__btn:focus .item__icon {
     background: url('./img/hover_icon.svg') center no-repeat;
     background-size: cover;
@@ -125,6 +109,7 @@ html {
     width: 2.4rem;
     height: 2.4rem;
 }
+
 @keyframes showImg {
     0% {
         transform: translateX(-10%);
@@ -133,6 +118,25 @@ html {
     100% {
         transform: translateX(0%);
         opacity: 1;
+    }
+}
+
+@media (hover) {
+    .accord__list:hover,
+    .accord__item:hover,
+    .item__btn:hover {
+        cursor: pointer;
+    }
+    .accord:hover .item__icon {
+        opacity: 1;
+    }
+    .accord__item:hover .item__img {
+        animation-name: showImg;
+        animation-duration: .3s;
+        display: block;
+    }
+    .item__btn:hover .item__icon {
+        transform: rotate(45deg);
     }
 }
 
