@@ -1,6 +1,7 @@
 html {
     font-size: 62.5%;
     font-family: 'Century Gothic', sans-serif;
+    background: blanchedalmond url('./img/memes/bg_meme.jpg') repeat;
 }
 * {
     padding: 0;
@@ -11,12 +12,12 @@ html {
     border: none;
 }
 .container {
-    background: blanchedalmond url('./img/memes/bg_meme.jpg') repeat;
     width: 100%;
+    min-height: 124.5rem;
     display: flex;
     justify-content: center;
     padding-top: 2rem;
-    padding-bottom: 48rem;
+    padding-bottom: 2rem;
 }
 .accord {
     display: flex;
@@ -39,7 +40,7 @@ html {
     max-width: 70rem;
     overflow: hidden;
     padding: 1.6rem 0;
-    border-bottom: 0.1em solid rgba(22, 68, 93, .2);
+    border-bottom: 0.1em solid #16445d33;
 }
 .accord__item:last-of-type {
     border-bottom: none;
@@ -150,12 +151,14 @@ html {
         transform: rotate(45deg);
     }
     .item__img:hover {
-        border: 1rem solid white;
-        /* animation: none; */
+        border: 1rem solid #fff;
     }
 }
 
 @media screen and (max-width: 1200px) {
+    .container {
+        min-height: 116rem;
+    }
     .accord__list {
         min-width: 64rem;
         padding: 2rem;
@@ -167,8 +170,7 @@ html {
 
 @media screen and (max-width: 840px) {
     .container {
-        padding-bottom: 40rem;
-        min-height: 100vh;
+        min-height: 98rem;
     }
     .accord__list {
         min-width: 46rem;
@@ -191,7 +193,7 @@ html {
 
 @media screen and (max-width: 500px) {
     .container {
-        padding-bottom: 26rem;
+        min-height: 72rem;
     }
     .accord__list {
         min-width: 24rem;
