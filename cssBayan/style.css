@@ -177,26 +177,10 @@ html {
     }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 500px) {
     .container {
         padding-bottom: 26rem;
     }
-    .accord__list {
-        min-width: 30rem;
-        padding: 2rem .4rem;
-    }
-    .item__img {
-        width: 28rem;
-        height: 22rem;
-    }
-    .accord__title {
-        font-size: 3rem;
-    }
-    .item__title {
-        font-size: 1.8rem;
-    }
-}
-@media screen and (max-width: 350px) {
     .accord__list {
         min-width: 26rem;
         padding: 2rem .4rem;
@@ -204,5 +188,11 @@ html {
     .item__img {
         width: 24rem;
         height: 18rem;
+    }
+    .accord__title {
+        font-size: 3rem;
+    }
+    .item__title {
+        font-size: 1.8rem;
     }
 }
